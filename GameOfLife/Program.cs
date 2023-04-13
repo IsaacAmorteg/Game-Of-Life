@@ -13,19 +13,10 @@ class GameOfLife
         fieldHeight = 5;
         field = new char[fieldWidth, fieldHeight];
 
-        Random random = new Random();
-        for (int y = 0; y < fieldHeight; y++)
-        {
-            for (int x = 0; x < fieldWidth; x++)
-            {
-                field[x, y] = (random.Next(2) == 0) ? '-' : '+';
-            }
-        }
+        GenerateRandomInitState();
 
-        // Output the initial state of the field
         PrintField();
 
-        // Keep updating the field on button press until game is over
         while (true)
         {
             if (!UpdateField())
@@ -121,6 +112,18 @@ class GameOfLife
             Console.Write(x % 10 + " ");
         }
         Console.WriteLine();
+    }
+
+    static void GenerateRandomInitState()
+    {
+        Random randomState = new Random();
+        for (int y = 0; y < fieldHeight; y++)
+        {
+            for (int x = 0; x < fieldWidth; x++)
+            {
+                field[x, y] = (randomState.Next(2) == 0) ? '-' : '+';
+            }
+        }
     }
 
 }
