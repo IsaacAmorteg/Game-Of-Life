@@ -33,7 +33,7 @@ class GameOfLife
                 Console.WriteLine("Game over");
                 break;
             }
-            Console.ReadLine();
+            Console.ReadKey();
             Console.Clear();
             PrintField();
         }
