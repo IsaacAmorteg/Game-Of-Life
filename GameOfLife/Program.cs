@@ -113,7 +113,7 @@ class GameOfLife
         }
         Console.WriteLine();
     }
-
+         
     static void GenerateRandomInitState()
     {
         Random randomState = new Random();
