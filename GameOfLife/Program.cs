@@ -112,7 +112,7 @@ class GameOfLife
             Console.WriteLine();
         }
 
-        Console.Write("  ");
+        Console.Write("0 ");
         for (int x = 1; x <= fieldWidth; x++)
         {
             Console.Write(x % 10 + " ");
