@@ -31,8 +31,11 @@ class GameOfLife
             if (!UpdateField())
             {
                 Console.WriteLine("Game over");
+                Console.ReadKey();
                 break;
             }
+            Console.WriteLine();
+            Console.WriteLine("Press any key to continue to the next generation.");
             Console.ReadKey();
             Console.Clear();
             PrintField();
