@@ -8,7 +8,6 @@ class GameOfLife
 
     static void Main(string[] args)
     {
-        // Set up the initial state of the field
         fieldWidth = 9;
         fieldHeight = 5;
         field = new char[fieldWidth, fieldHeight];
